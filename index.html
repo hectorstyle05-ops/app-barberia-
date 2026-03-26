@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbería Élite | Estilo Profesional</title>
+    <meta
+      name="description"
+      content="Barbería Élite: cortes modernos, barba premium y atención profesional. Reserva tu cita en minutos."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header" id="inicio">
+      <div class="container nav-wrapper">
+        <a href="#inicio" class="logo" aria-label="Ir al inicio">Barbería <span>Élite</span></a>
+        <button class="menu-btn" id="menu-btn" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <nav class="nav" id="nav">
+          <a href="#servicios">Servicios</a>
+          <a href="#nosotros">Nosotros</a>
+          <a href="#galeria">Galería</a>
+          <a href="#contacto">Contacto</a>
+          <a href="#reserva" class="btn btn-small">Reservar</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">Experiencia premium para caballeros</p>
+            <h1>Tu imagen, llevada al siguiente nivel</h1>
+            <p class="lead">
+              Cortes de precisión, diseño de barba y asesoría personalizada para que salgas con una
+              presencia impecable.
+            </p>
+            <div class="hero-actions">
+              <a href="#reserva" class="btn">Agendar cita</a>
+              <a href="#servicios" class="btn btn-ghost">Ver servicios</a>
+            </div>
+          </div>
+          <aside class="hero-card">
+            <h2>Horario</h2>
+            <ul>
+              <li><span>Lunes - Viernes</span> <strong>09:00 - 21:00</strong></li>
+              <li><span>Sábado</span> <strong>10:00 - 20:00</strong></li>
+              <li><span>Domingo</span> <strong>11:00 - 17:00</strong></li>
+            </ul>
+            <p>Centro Comercial Plaza Nova, Local 27.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" id="servicios">
+        <div class="container">
+          <h2>Servicios destacados</h2>
+          <div class="cards">
+            <article class="card">
+              <h3>Corte ejecutivo</h3>
+              <p>Acabado limpio y moderno, adaptado a tu rostro y estilo de vida.</p>
+              <span>Desde $18</span>
+            </article>
+            <article class="card">
+              <h3>Barba premium</h3>
+              <p>Perfilado con navaja, hidratación y aplicación de productos profesionales.</p>
+              <span>Desde $15</span>
+            </article>
+            <article class="card">
+              <h3>Paquete completo</h3>
+              <p>Corte + barba + ritual de toalla caliente para una experiencia total.</p>
+              <span>Desde $30</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="nosotros">
+        <div class="container split">
+          <div>
+            <h2>Profesionales con enfoque en detalle</h2>
+            <p>
+              Nuestro equipo combina técnicas clásicas con tendencias actuales para crear estilos
+              únicos. Trabajamos con productos de alta calidad y un servicio cercano.
+            </p>
+          </div>
+          <ul class="stats">
+            <li><strong>+10</strong><span>Años de experiencia</span></li>
+            <li><strong>4.9/5</strong><span>Valoración promedio</span></li>
+            <li><strong>+8k</strong><span>Clientes atendidos</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="section" id="galeria">
+        <div class="container">
+          <h2>Galería de estilos</h2>
+          <div class="gallery" aria-label="Galería de trabajos">
+            <div class="photo photo-1"></div>
+            <div class="photo photo-2"></div>
+            <div class="photo photo-3"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section alt" id="reserva">
+        <div class="container">
+          <h2>Reserva tu cita</h2>
+          <form class="booking-form" id="booking-form">
+            <label>
+              Nombre
+              <input type="text" name="nombre" required />
+            </label>
+            <label>
+              Teléfono
+              <input type="tel" name="telefono" required />
+            </label>
+            <label>
+              Servicio
+              <select name="servicio" required>
+                <option value="">Selecciona una opción</option>
+                <option value="corte">Corte ejecutivo</option>
+                <option value="barba">Barba premium</option>
+                <option value="paquete">Paquete completo</option>
+              </select>
+            </label>
+            <label>
+              Fecha
+              <input type="date" name="fecha" required />
+            </label>
+            <button type="submit" class="btn">Confirmar solicitud</button>
+          </form>
+          <p class="form-message" id="form-message" aria-live="polite"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer" id="contacto">
+      <div class="container footer-grid">
+        <div>
+          <h3>Barbería Élite</h3>
+          <p>Tel: +1 (555) 234-8899</p>
+          <p>hola@barberiaelite.com</p>
+        </div>
+        <div>
+          <h3>Síguenos</h3>
+          <p>@barberiaelite</p>
+          <p>Instagram | Facebook | TikTok</p>
+        </div>
+      </div>
+      <p class="copyright">© <span id="year"></span> Barbería Élite. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
