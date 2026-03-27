@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zona VIP Barbershop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero" id="inicio">
+      <nav class="nav container">
+        <h1 class="logo">Zona VIP <span>Barbershop</span></h1>
+        <ul class="menu">
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#galeria">Galería</a></li>
+          <li><a href="#reserva">Reserva</a></li>
+        </ul>
+      </nav>
+
+      <div class="hero-content container">
+        <p class="eyebrow">Estilo Premium • Atención Personalizada</p>
+        <h2>Tu estilo, tu zona: <strong>VIP</strong>.</h2>
+        <p>
+          Cortes modernos, barbería clásica y experiencia de primer nivel en un
+          solo lugar.
+        </p>
+        <a href="#reserva" class="btn">Reservar turno</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="services section container" id="servicios">
+        <h3>Nuestros servicios</h3>
+        <div class="cards">
+          <article class="card">
+            <h4>Corte VIP</h4>
+            <p>Asesoría + corte personalizado + peinado final.</p>
+            <span>$18.000</span>
+          </article>
+          <article class="card">
+            <h4>Barba Premium</h4>
+            <p>Perfilado, toalla caliente, hidratación y acabado.</p>
+            <span>$12.000</span>
+          </article>
+          <article class="card">
+            <h4>Combo Full</h4>
+            <p>Corte VIP + Barba Premium + masaje relajante.</p>
+            <span>$27.000</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="gallery section" id="galeria">
+        <div class="container">
+          <h3>Estilos que hablan por vos</h3>
+          <div class="gallery-grid">
+            <div class="tile one"></div>
+            <div class="tile two"></div>
+            <div class="tile three"></div>
+            <div class="tile four"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="booking section container" id="reserva">
+        <h3>Reservá tu turno</h3>
+        <form id="bookingForm" class="booking-form" novalidate>
+          <label>
+            Nombre
+            <input type="text" name="name" placeholder="Tu nombre" required />
+          </label>
+          <label>
+            Teléfono
+            <input type="tel" name="phone" placeholder="+54 ..." required />
+          </label>
+          <label>
+            Servicio
+            <select name="service" required>
+              <option value="">Seleccioná un servicio</option>
+              <option>Corte VIP</option>
+              <option>Barba Premium</option>
+              <option>Combo Full</option>
+            </select>
+          </label>
+          <label>
+            Fecha
+            <input type="date" name="date" required />
+          </label>
+          <button class="btn" type="submit">Confirmar reserva</button>
+          <p id="formMessage" class="form-message" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Zona VIP Barbershop — Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
