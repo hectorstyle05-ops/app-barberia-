@@ -3,13 +3,18 @@ const message = document.getElementById('formMessage');
 const year = document.getElementById('year');
 const dateInput = document.querySelector('input[name="date"]');
 
+const getLocalDateISO = () => {
+  const now = new Date();
+  const offsetMs = now.getTimezoneOffset() * 60 * 1000;
+  return new Date(now.getTime() - offsetMs).toISOString().split('T')[0];
+};
+
 if (year) {
   year.textContent = new Date().getFullYear();
 }
 
 if (dateInput) {
-  const today = new Date().toISOString().split('T')[0];
-  dateInput.min = today;
+  dateInput.min = getLocalDateISO();
 }
 
 if (form && message) {
@@ -29,5 +34,9 @@ if (form && message) {
 
     message.textContent = `¡Gracias ${name}! Tu turno para ${service} quedó reservado para el ${date}.`;
     form.reset();
+
+    if (dateInput) {
+      dateInput.min = getLocalDateISO();
+    }
   });
 }
